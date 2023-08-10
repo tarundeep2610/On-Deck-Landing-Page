@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+*{
+    font-family: 'Inter', sans-serif;
+    color: #777;
+}
+
+html{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: block;
+    background-color: antiquewhite;
+    max-height: 100vh;
+    padding: 0 10px;
+}
+
+nav{
+    padding-top: 30px;
+}
+
+nav section{
+    display: flex;
+    max-width: 1150px;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo img{
+    margin-top: 2px;
+    height: 31px;
+}
+
+.navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 55%;
+    font-weight: bold;
+}
+
+.navigation div{
+    padding: 0 4%;
+}
+
+.navigation div:hover{
+    color: black;
+    cursor: pointer;
+}
+
+.hamburger-icon{
+    border: black solid 2px;
+    width: 25px;
+    margin-right: 20px;
+    display: none;
+}
+
+.hamburger-icon::before{
+    content: "";
+    border: black solid 2px;
+    width: 25px;
+    position: absolute;
+    top:47px;
+    right:18px;
+    margin-right: 20px;
+}
+
+.hamburger-icon::after{
+    content: "";
+    border: black solid 2px;
+    width: 25px;
+    position: absolute;
+    top: 63px;
+    right: 18px;
+    margin-right: 20px;
+}
+
+.hamburger-icon:hover {
+    cursor: pointer;
+}
+
+.navBtn{
+    display: flex;
+}
+
+.navBtn button{
+    font-weight: bold;
+    font-size: 1em;
+}
+
+#signIn{
+    background-color: transparent;
+    border: none;
+    margin: 0 10px;
+}
+
+#signIn:hover{
+    color: black;
+    cursor: pointer;
+}
+
+.try{
+    padding: 13px 22px;
+    border: none;
+    background-color: rgba(2, 66, 31, 1);
+    color: white;
+    border-radius: 5px;
+}
+
+.try:hover{
+    background-color: rgba(32, 136, 51);
+    cursor: pointer;
+}
+
+#product-box {
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-direction: column;
+    height: 290px;
+    width: 400px;
+    position: absolute;
+    top: 90px;
+    left: 300px;
+    z-index: 1;
+    background-color: rgb(250, 249, 248);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.box-items {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: 0 0 25px 0;
+}
+
+.box-items div {
+    display: flex;
+    align-items: center;
+    padding: 0 0 8px 0;
+}
+
+#product-box p {
+    box-sizing: border-box;
+    font-size: .85rem;
+    font-weight: bold;
+    margin: 0;
+    margin-left: 20px;
+}
+
+.about{
+    padding-left: 24px;
+}
+
+#product-box::before{
+    content: "";
+    background-color:rgb(250, 249, 248);
+    width: 20px;
+    height: 20px;
+    rotate: 45deg;
+    position: absolute;
+    top:-7px;
+    left:112px;
+}
+
+p{
+    font-size: 0.9rem;
+}
+
+main{
+    display: flex;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 65px 0 30px 0;
+    justify-content: space-between;
+}
+
+main section{
+    display: flex;
+    flex-direction: column;
+    padding-right: 60px;
+}
+
+main section h1{
+    font-size: 5rem;
+    margin: 0 0 25px 0;
+    color: black;
+}
+
+main section h1 span{
+    color: orange;
+}
+
+main section div{
+    display: flex;
+}
+
+main section .try{
+    display: block;
+    height: 46px;
+    width: 129px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.hero-image img{
+    width:18vw;
+    height: 45vh;;
+}
+
+.rating{
+    display: flex;
+}
+
+.rating img {
+    width: 20px;
+    margin: 0 10px
+}
+
+footer{
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.companies-image{
+    display: flex;
+}
+
+.companies-image img{
+    height: 20%;
+    margin: 0 20px;
+}
+
+@media (max-width: 1000px){
+    .navigation {
+            display: none;
+        }
+    
+        .navBtn {
+            display: none;
+        }
+    
+        .hamburger-icon {
+            display: inline;
+        }
+    
+        .hero-image {
+            display: none;
+        }
+
+        main section > * {
+            margin: 3% 0;
+        }
+
+        p{
+            font-size: 2rem;
+        }
+
+        main section{
+            margin: 2vh 0;
+        }
+
+        /* footer{
+            position: absolute;
+            bottom: 100px;
+            margin: 0 auto;
+        } */
+
+        .companies-image {
+            margin-top: 10px;
+            display: grid;
+            row-gap: 10px;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .companies-image img {
+            height: 75%;
+            width: 250px;
+        }
+}
+
+@media (max-width: 600px) {
+    .navigation{
+        display: none;
+    }
+    .navBtn{
+        display: none;
+    }
+    .hamburger-icon{
+        display: inline;
+    }
+    .hero-image{
+        display: none;
+    }
+    main section h1 {
+        font-size: 4rem;   
+    }
+
+    p{
+        font-size: 0.8rem;
+    }
+    .companies-image{
+        margin-top: 10px;
+        display: grid;
+        row-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .companies-image img{
+        height: 75%;
+        width: 150px;
+    }
+}
