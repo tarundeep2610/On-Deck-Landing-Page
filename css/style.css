@@ -116,16 +116,19 @@ nav section{
     cursor: pointer;
 }
 
+#drop-down {
+    position: relative;
+}
+
 #product-box {
     box-sizing: border-box;
     display: inline-flex;
     flex-direction: column;
-    height: 290px;
+    height: 280px;
     width: 400px;
     position: absolute;
-    top: 90px;
-    left: 300px;
-    z-index: 1;
+    top: 32px;
+    left: -61px;
     background-color: rgb(250, 249, 248);
     padding: 25px;
     border-radius: 10px;
